@@ -1,55 +1,137 @@
 @charset "utf-8";
 
-/*Oscar Perez, July 1st*/
-
-
+/*
+   Author: Oscar Perez 
+   Date:   07/13/22
+   Filename: my_layout.css
+*/
 
 /*color schemes*/
 
 html {
-    background-color: hsl(1230, 60%, 80%);
+    background-color: wheat;
 }
+
+/* Body Styles */
 body {
-    color: rgb(91, 91, 91);
+    margin-left: auto; /*centers body*/
+    margin-right: auto; /*centers body*/
+    max-width: 960px;
+    min-width: 640px;
+    width: 95%; /*web page size*/
+    color: darkgoldenrod;
     background-color: floralwhite;
 }
 
+
+
+
+/*H1/H2/P*/
 h1{
     color: white;
-    background-color: rgb(12, 180, 200);
-}
-
-h2{
-    color: white;
-    background-color: rgb(12, 180, 200);
-}
-
-footer {
-    color: white;
-    background-color: rgb(12, 180, 200);    
-}
-
-
-
-/*fonts, size, and spacing*/
-
-h1{
+    background-color: darkred;
     font-family: Verdana, Geneva, sans-serif;
     letter-spacing: 0.5em;
 }
 
+
 h2{
+    color: white;
+    background-color: darkred;
     font-family: Verdana, Geneva, sans-serif;
+    width: 100%;
 }
 
-footer{
-    font-family: Verdana, Geneva, sans-serif;
+p {
+    margin-left: 5px;
+}
+
+/*Nav Bar Setup*/
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkred;
+}
+
+
+/*controls nav bar*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    border-right: 1px solid floralwhite;
+}
+    
+/*controls nav bar*/
+li a:hover {
+  background-color: #F5DEB3;
+}
+    
+
+
+/*Nav Bar Setup*/
+
+/*Sets nav list as horizontal and bar size*/
+
+body > header > nav.horizontalNavigation li {
+    width: 33.33%; /*sets image width*/
+    color: darkred;
+}
+
+nav.horizontalNavigation li {
+    display: block;
+    float: left; /*floats nav bar list*/
+}
+
+/*sets nav bar as block buttons*/
+nav.horizontalNavigation a {
+    display: block; /*sets button as block*/
+    text-align: center;/*centers text*/
+}
+
+
+/* Left Column Styles */
+section#leftColumn { /*floats column to the left*/
+    clear: none;
+    float: left;
+    width: 33%;
 }
 
 
 
-/*nav height*/
-nav > ul {
-    line-height: 1.5em;
-    padding-left: 40px;
+/* Right Column Styles */ /*images*/
+section#rightColumn { /*floats column to the left*/
+    clear: none;
+    float: left;
+    width: 67%;
+}
+
+section#bottomColumn {
+    float: left;
+    width: 67%;
+}
+
+img {
+    float: right;
+}
+
+/* Footer Styles */
+footer {
+    font-size: 14px;
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: tan;
+    clear: left;/*displays footer once cleared of floated objects*/
+}
+
+footer::after { /*creates element AFTER footer*/
+    clear: both; /*places it after margins cleared*/
+    content: ""; /*empty content*/
+    display: table; /*set as a web table*/
 }
