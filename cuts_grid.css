@@ -1,0 +1,122 @@
+/*
+sets the container class as the grid
+defines the # of rows and columns
+arranges the grid layout with characters
+*/
+
+/*Validated*/
+
+
+/*details entire body section*/
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    color: #1F2A37;
+    background-color: #B6C6E1;
+    height: auto;
+    max-width: 100%;
+}
+
+
+/*grid setup*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 50px 350px 100px;
+    grid-gap: 5px;
+    grid-template-areas: 
+        " h h h h h h h h h h h h "
+        "n n n n n n n n n n n n"
+        " c c c c c c m1 m1 m1 m2 m2 m2"
+        "f f f f f f f f f f f f";
+}
+
+
+
+/*assigns the grid characters to its class*/
+
+header {
+    grid-area: h;
+    background-color: #01367E;
+    text-decoration: none;
+    text-decoration-color: floralwhite;
+}
+
+/*nav bar actual bar*/
+.horizontalNavigation {
+    grid-area: n;
+    text-decoration: none;
+    background-color: #01367E;
+    
+}
+
+/*nav bar text*/
+li a {
+    display: grid;
+    text-align: left;
+    color: floralwhite;
+    padding: 10px 30px;
+    border-right: 2px solid floralwhite;
+    text-decoration: none;
+    
+}
+
+
+li a:hover{
+    background-color: #CACACA;
+}
+
+/*nav list categories*/
+ul {
+    display: grid;
+    list-style: none; /*remove bullet/numbers from list*/
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+/*sections*/
+
+.menu1 {
+    grid-area: m1;
+    margin-right: 2px;
+}
+
+.menu2 {
+    grid-area: m2;
+    margin-right: 2px
+}
+
+.content {
+    grid-area: c;
+    margin-left: 5px; /*adjust left side margin*/
+    margin-right: 10px;
+}
+
+.footer {
+    grid-area: f;
+    margin-left: 5px; /*adjust left side margin*/
+}
+
+img { /*auto resize images when when window is resized*/
+    height: auto;
+    max-width: 100%;
+}
+
+/*color schemes*/
+
+h1 {
+    color: floralwhite;
+    background-color: #01367E;
+    letter-spacing: 1em;
+}
+
+h2 {
+    color: floralwhite;
+    background-color: #01367E;
+}
+
+h3 {
+    color: floralwhite;
+    background-color: #01367E;
+}
