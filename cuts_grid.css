@@ -13,9 +13,10 @@ body {
     margin-right: auto;
     width: 95%;
     color: #1F2A37;
-    background-color: #B6C6E1;
+    background-color: whitesmoke; /*previously: #B6C6E1*/
     height: auto;
     max-width: 100%;
+    font-size: 19px;
 }
 
 
@@ -23,8 +24,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: none;
-    grid-gap: 5px;
+    grid-gap: 10px;
     grid-template-areas: 
         "h h h h h h h h h h h h"
         "h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1"
@@ -42,6 +42,7 @@ header {
     background-color: lightgray;
     text-decoration: none;
     text-decoration-color: floralwhite;
+    height: 30%;
 }
 
 /*nav bar actual bar*/
@@ -49,6 +50,7 @@ header {
     grid-area: n;
     text-decoration: none;
     background-color: #01367E;    
+    font-size: 18px;
 }
 
 /*nav bar text*/
@@ -75,16 +77,20 @@ ul {
     
 }
 
-/*sections*/
+/*Index Sections*/
+
+.list {
+    margin-left: 10px;
+}
 
 .menu1 {
     grid-area: m1;
-    margin-right: 2px;
+    margin-right: 40px;
 }
 
 .menu2 {
     grid-area: m2;
-    margin-right: 2px
+    margin-right: 40px;
 }
 
 .content {
@@ -93,7 +99,7 @@ ul {
     margin-right: 10px;
 }
 
-.footer {
+.links {
     grid-area: f;
     margin-left: 5px; /*adjust left side margin*/
 }
@@ -109,17 +115,23 @@ h1 {
     grid-area: h1;
     color: floralwhite;
     background-color: #01367E;
-    letter-spacing: 1em;
+    letter-spacing: 0.93em;
+    height: 20px;
+    font-size: 20px;
 }
 
 h2 {
     color: floralwhite;
     background-color: #01367E;
+    height: auto;
+    font-size: 25px;
 }
 
 h3 {
     color: floralwhite;
     background-color: #01367E;
+    height: 30px;
+    font-size: 25px;
 }
 
 
@@ -143,7 +155,7 @@ h3 {
 /*Form Styling*/
 /*Form Page - Left Column*/
 
-.form {
+.contact {
     grid-area: fo;
     margin-left: 5px; /*adjust left side margin*/
     margin-right: 10px;
@@ -196,14 +208,18 @@ input[type=submit]:hover {
 
 .FAQs1 {
     grid-area: q1;
-    margin-right: 2px;
+    margin-right: 40px;
 }
 
 .FAQs2 {
     grid-area: q2;
-    margin-right: 2px
+    margin-right: 40px;
 }
 
+ol li {
+    display: block;
+    list-style-type: none;
+}
 
 
 
@@ -211,7 +227,13 @@ input[type=submit]:hover {
 .tools-page {
 
     
-  /* grid-template-areas: ; left blank due to grid issues */
+ grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1"
+        "n n n n n n n n n n n n"
+        "g g g g g g g g g g g g"
+        "rt rt rt rt rt rt rt2 rt2 rt2 rt2 rt2 rt2"
+        "f f f f f f f f f f f f"; 
 
  
 }
@@ -219,35 +241,86 @@ input[type=submit]:hover {
 /*Image Gallery Styling*/
 /*Tools Page - Left Column*/
 
-.gallery {
-   /* grid-area: ; left blank due to grid issues */
-    margin: 10px;
-    border: 3px solid #ccc;
-    float: left;
+.gallery { /*entire gallery*/
+    display: flex;
+    grid-template-columns: auto;
+   grid-area: g;
+    margin: 60px;
+    width: 90%;
+    height: auto;
 
 }
 
-.gallery:hover {
+
+
+.pic:hover {
     border: 3px solid wheat;
 }
 
-.gallery img {
+.gallery pic { /*actual pic*/
     width: 100%;
     height: auto;
+    
 }
+
+.pic { /*card/box*/
+        border: 3px solid #ccc;
+        flex: 100%;
+        padding: 13px;
+
+}
+
+.card-footer {
+    border-top: .5px solid lightgray;
+    text-align: center;
+
+}
+
 
 .desc {
     padding: 15px;
     text-align: center;
 } 
 
-/*Tools Page - right Column*/
+
+/*Flexbox Image Styling*/
+
+.gallery > * {
+    box-sizing: border-box;
+    margin: 1px;
+}
+
+
+
+
+
+/*Tools Page - Paragraphs*/
+
+
 .rectools {
-   /* grid-area: ; left blank due to grid issues */
+    margin: auto;
+    grid-area: rt;
 
 }
 
-.rectools2 {
-    /* grid-area: ; left blank due to grid issues*/
 
+
+.rectools2 {
+    margin: auto;
+    grid-area: rt2;
+}
+
+
+/*Technique Page Style*/
+
+.techniques {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1"
+        "n n n n n n n n n n n n"
+        "c c c c c c m1 m1 m1 m2 m2 m2"
+        "f f f f f f f f f f f f";
 }
