@@ -17,6 +17,7 @@ body {
     height: auto;
     max-width: 100%;
     font-size: 19px;
+    font-family: sans-serif;
 }
 
 
@@ -80,7 +81,7 @@ ul {
 /*Index Sections*/
 
 .list {
-    margin-left: 10px;
+    margin-left: 1px;
 }
 
 .menu1 {
@@ -219,6 +220,7 @@ input[type=submit]:hover {
 ol li {
     display: block;
     list-style-type: none;
+    margin-top: 20px;
 }
 
 
@@ -313,14 +315,36 @@ ol li {
 
 /*Technique Page Style*/
 
-.techniques {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 10px;
-    grid-template-areas: 
-        "h h h h h h h h h h h h"
-        "h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1"
-        "n n n n n n n n n n n n"
-        "c c c c c c m1 m1 m1 m2 m2 m2"
-        "f f f f f f f f f f f f";
+.techniques-class {
+
+
 }
+
+
+.maintenance-class {
+    margin-left: 5px;
+}
+
+
+.links {
+  overflow: hidden;
+  background-color: lightgray;
+  bottom: 0;
+  width: 100%;
+}
+
+.links a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.links a:hover {
+  background: lightblue;
+  color: white;
+}
+
+
