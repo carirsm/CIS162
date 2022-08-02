@@ -295,6 +295,58 @@ ol li {
 
 
 
+/*Card Box*/
+
+.card-group { /*entire gallery*/
+    display: flex;
+    grid-template-columns: auto;
+   grid-area: g;
+    margin: 60px;
+    width: 90%;
+    height: auto;
+
+}
+
+
+
+.card:hover {
+    border: 3px solid wheat;
+}
+
+.card-group card { /*actual pic*/
+    width: 100%;
+    height: auto;
+    
+}
+
+.card { /*card/box*/
+        border: 3px solid #ccc;
+        flex: 100%;
+        padding: 13px;
+    
+
+}
+
+.card-footer {
+    text-align: center;
+
+}
+
+
+.desc {
+    padding: 15px;
+    text-align: center;
+} 
+
+
+/*Flexbox Image Styling*/
+
+.card-group > * {
+    box-sizing: border-box;
+    margin: 1px;
+}
+
+
 
 /*Tools Page - Paragraphs*/
 
